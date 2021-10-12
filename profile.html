@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="profile.css">
+        <title>Password Generator</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    
+    </head>
+    <body>
+            <div class="main-bg ">
+              <div class="p-4 mb-4 text-center ml-4 mr-4">
+                  <h1 class="main-heading p-2">Password Generator</h1>
+              </div>
+              <div class="body-container p-5 ">
+                    <form id="mainForm" class="ml-4 mr-4">
+                      <div class="d-flex flex-row justify-content-center">
+                        <input id="numbers" class="radio-btn " type="checkbox" checked>
+                        <label class="label ml-2 mr-4" for="numbers">Numbers</label>
+
+                      <input id="characters" class="radio-btn " type="checkbox" checked>
+                      <label class="label ml-2 mr-4" for="characters">Characters</label>
+
+                    <input id="caps" class="radio-btn " type="checkbox" checked>
+                    <label class="label ml-2 mr-4" for="Capital Letters">Capital Letters</label>
+                  </div>
+                        <div class="mt-4">
+                          <label class="label" for="length" >Length</label>
+                          <input id="length" placeholder="Default Password length will be 14" class="radio-btn form-control " type="text">
+                        </div>
+                        <div class="text-center mt-5">
+                          <button id="submitBtn" type="submit" class="btn btn-primary">Generate Password</button>
+                        </div>
+                    </form>
+                    <div class="output mt-5">
+                        <span class="output output-bg" id="output"></span>
+                      </div>
+              </div>
+                </div>
+        <script src="profile.js"></script>
+    </body>
+</html>

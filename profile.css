@@ -1,0 +1,40 @@
+.main-bg{
+    background-color:#E1E1F6;
+    height :100vh;
+}
+
+.main-heading{
+    -webkit-border-radius: 25px;
+    border-radius: 10px;
+    background: #e1e1f6;
+    -webkit-box-shadow: 21px 21px 80px #a2a2b1, -21px -21px 80px #ffffff;
+    box-shadow: 21px 21px 80px #a2a2b1, -21px -21px 80px #ffffff;
+}
+.body-container{
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    background: #D1D8EC;
+    -webkit-box-shadow: 30px 30px 60px #969caa, -30px -30px 60px #ffffff;
+    box-shadow: 30px 30px 60px #969caa, -30px -30px 60px #ffffff;
+    height:70vh;
+    margin:20px
+}
+.radio-btn{
+    width:20px;
+    height:20px
+}
+.label{
+    height:20px;
+}
+.output{
+    text-align: center;
+}
+.output-bg{
+    background: rgba( 155, 155, 155, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    padding:20px
+}

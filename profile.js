@@ -5,6 +5,7 @@ let capsEle=document.getElementById("caps");
 let lengthEle=document.getElementById("length");
 let btnEle=document.getElementById("submitBtn");
 let outputEle=document.getElementById("output");
+let errorEle=document.getElementById("errorId");
 
 let formDetails={
   "num":true,
@@ -26,21 +27,21 @@ function displayPassword(reqData){
     strings:[dat],
     loop:false,
     cursorChar:"",
-    typeSpeed:0,
-    backSpeed:0
+    typeSpeed:10,
+    backSpeed:20
   })
 }
 
 numbersEle.addEventListener("change",function(event){
   if (numbersEle.checked===true){
     formDetails.num=true
-    console.log(formDetails)
+     
     outputEle.textContent=""
     getPassword(formDetails)
   }
   else if(numbersEle.checked===false){
     formDetails.num=""
-    console.log(formDetails)
+ 
     outputEle.textContent=""
     getPassword(formDetails)
   }
@@ -49,13 +50,12 @@ numbersEle.addEventListener("change",function(event){
 charsEle.addEventListener("change",function(){
   if(charsEle.checked===true){
     formDetails.char=true
-    console.log(formDetails)
     outputEle.textContent=""
     getPassword(formDetails)
   }
   else if(charsEle.checked===false){
     formDetails.char=""
-    console.log(formDetails)
+ 
     outputEle.textContent=""
     getPassword(formDetails)
   }
@@ -65,11 +65,9 @@ capsEle.addEventListener("change",function(){
   if (capsEle.checked===true){
     formDetails.caps=true
     outputEle.textContent=""
-    console.log(formDetails)
     getPassword(formDetails)
   }else if(capsEle.checked===false){
-    formDetails.caps=""
-    console.log(formDetails)
+    formDetails.caps="" 
     outputEle.textContent=""
     getPassword(formDetails)
   }
@@ -77,7 +75,7 @@ capsEle.addEventListener("change",function(){
 
 
 function getPassword(formDetails){
-  console.log(formDetails)
+   
   let url="https://passwordinator.herokuapp.com/generate?num="+formDetails.num+"&char="+formDetails.char+"&caps="+formDetails.caps+"&len="+formDetails.len;
  console.log(url)
   fetch(url)
@@ -93,7 +91,14 @@ function getPassword(formDetails){
 getPassword(formDetails)
 
 lengthEle.addEventListener("blur",function(event){
-  formDetails.len=parseInt(event.target.value)
+  if (event.target.value>40){
+          errorEle.classList.remove("d-none")
+  }else{
+
+    errorEle.classList.add("d-none")
+    formDetails.len=parseInt(event.target.value)
+  }
+
 })
 
 
@@ -102,4 +107,5 @@ event.preventDefault()
 outputEle.textContent=""
 getPassword(formDetails)
 })
+
 

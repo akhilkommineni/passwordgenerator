@@ -20,7 +20,6 @@ function displayPassword(reqData){
   for (let each of dat){
    if (each==="&"){
      dat=dat.replace("&","#")
-     console.log(dat)
    }
   }
   let pass=new Typed("#output",{
@@ -35,13 +34,11 @@ function displayPassword(reqData){
 numbersEle.addEventListener("change",function(event){
   if (numbersEle.checked===true){
     formDetails.num=true
-     
     outputEle.textContent=""
     getPassword(formDetails)
   }
   else if(numbersEle.checked===false){
     formDetails.num=""
- 
     outputEle.textContent=""
     getPassword(formDetails)
   }
@@ -93,6 +90,7 @@ getPassword(formDetails)
 lengthEle.addEventListener("blur",function(event){
   if (event.target.value>40){
           errorEle.classList.remove("d-none")
+          formDetails.len=14
   }else{
 
     errorEle.classList.add("d-none")
@@ -107,5 +105,4 @@ event.preventDefault()
 outputEle.textContent=""
 getPassword(formDetails)
 })
-
 

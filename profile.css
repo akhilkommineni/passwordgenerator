@@ -38,3 +38,8 @@
     border: 1px solid rgba( 255, 255, 255, 0.18 );
     padding:20px
 }
+.error-msg{
+    font-style: italic;
+    color: red;
+}
+
